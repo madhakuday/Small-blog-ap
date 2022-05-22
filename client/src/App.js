@@ -36,7 +36,7 @@ export class App extends Component {
               <Route exact path="/fullcard/:id">
                 <FullCard />
               </Route>
-              <Route exact path="*">
+              <Route exact path="/:id">
                 <Error />
               </Route>
             </Switch>

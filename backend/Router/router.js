@@ -6,6 +6,7 @@ import { cardmodel } from '../Model/model.js';
 
 router.get('/getcarddata', async (req, res) => {
   const a = await cardmodel.find({});
+  console.log(a);
   res.send(a);
 });
 
@@ -32,7 +33,10 @@ router.post('/postcard', async (req, res) => {
 
 router.get('/getcard/:id', async (req, res) => {
   try {
-    const carddata = await cardmodel.findOne({ _id: req.params.id });
+    const carddata = await cardmodel.findOne(
+      { _id: req.params.id },
+      { Date: 0, __v: 0 }
+    );
     console.log('card detail is ', carddata);
     res.send(carddata);
   } catch (error) {

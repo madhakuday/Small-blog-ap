@@ -1,5 +1,6 @@
 import React from 'react';
 import { Typography, makeStyles, Divider, Link } from '@material-ui/core';
+import { useParams } from 'react-router';
 
 const useStyles = makeStyles({
   titel: {
@@ -25,6 +26,9 @@ const useStyles = makeStyles({
   },
 });
 function Error() {
+  const { id } = useParams();
+  console.log(id);
+
   const classe = useStyles();
   return (
     <>
@@ -34,6 +38,7 @@ function Error() {
 
         <Typography className={classe.description}>404</Typography>
         <Divider />
+        <Typography className={classe.description}> {id}</Typography>
 
         <Typography className={classe.page}>Page not found</Typography>
 
