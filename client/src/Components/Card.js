@@ -36,7 +36,7 @@ class Cards extends Component {
                 <React.Fragment key={data._id}>
                   <Card
                     style={{
-                      width: '40%',
+                      width: '45%',
                       height: '20%',
                       margin: '10px',
                       boxShadow:
@@ -51,12 +51,12 @@ class Cards extends Component {
                         flexDirection: 'column',
                       }}
                     >
-                      <Typography variant="title">
+                      <Typography variant="h6">
                         {data.title.slice(0, 17)}....
                       </Typography>
 
                       <Typography
-                        variant="description"
+                        variant="subtitle1"
                         style={{ margin: '10px 0' }}
                       >
                         {data.description.slice(0, 30)}....
@@ -73,7 +73,7 @@ class Cards extends Component {
                   /> */}
 
                       <Link to={`/fullcard/${data._id}`}>
-                        <button className="btn btn-outline-primary">
+                        <button className="btn btn-outline-primary btn-sm">
                           <Typography variant="subtitle2">Read more</Typography>
                         </button>
                       </Link>

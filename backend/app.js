@@ -17,7 +17,6 @@ const __dirname = path.resolve();
 // ... other app.use middleware
 
 app.use(express.static(path.join(__dirname, 'client', 'build')));
-// console.log(path.join(__dirname, '../', 'client', 'build'));
 
 // Right before your app.listen(), add this:
 app.get('*', (req, res) => {

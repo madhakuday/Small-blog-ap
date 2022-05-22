@@ -44,7 +44,7 @@ export class FuulCard extends Component {
               }}
             >
               <div style={{ padding: '10px' }}>
-                <Typography variant="h3" color="primary" fontFamily="Helvetica">
+                <Typography variant="h4" color="primary" fontFamily="Helvetica">
                   {title}
                 </Typography>
               </div>
