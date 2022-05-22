@@ -6,10 +6,11 @@ import Main from './Pages/Main';
 
 import './App.css';
 
+import { Switch } from 'react-router-dom';
 //Comonents
 
 import FullCard from './Components/FullCard';
-import { Switch } from 'react-router-dom';
+import Error from './Components/Error';
 
 export class App extends Component {
   theme = createTheme({
@@ -34,6 +35,9 @@ export class App extends Component {
               </Route>
               <Route exact path="/fullcard/:id">
                 <FullCard />
+              </Route>
+              <Route exact path="*">
+                <Error />
               </Route>
             </Switch>
           </ThemeProvider>

@@ -48,7 +48,7 @@ export default class closeDrawer extends React.Component {
               underline="hover"
               color="inherit"
               style={{ marginLeft: '5px' }}
-              href="/home"
+              href="/"
             >
               Home
             </Link>
