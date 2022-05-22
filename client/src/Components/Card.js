@@ -22,7 +22,7 @@ class Cards extends Component {
 
   async componentDidMount() {
     const res = await axios.get('/getcarddata');
-    console.log('res is', res.data);
+
     this.setState({ carddata: res.data });
   }
 

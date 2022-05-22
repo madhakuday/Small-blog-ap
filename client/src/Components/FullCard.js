@@ -19,7 +19,6 @@ export class FuulCard extends Component {
 
     const result = await axios.get(`/getcard/${id}`);
     this.setState({ data: result.data });
-    console.log('result is ', this.state.data);
   }
 
   render() {
