@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, makeStyles, Divider } from '@material-ui/core';
+import { Typography, makeStyles, Divider, Link } from '@material-ui/core';
 
 const useStyles = makeStyles({
   titel: {
@@ -36,6 +36,10 @@ function Error() {
         <Divider />
 
         <Typography className={classe.page}>Page not found</Typography>
+
+        <Divider />
+
+        <Link href="/">go to home</Link>
       </div>
     </>
   );
